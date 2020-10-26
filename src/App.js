@@ -135,7 +135,7 @@ export default function MultilineTextFields() {
                                 <TextField
                                     label="輸入總貸款金額"
                                     value={money}
-                                    onChange={event => setMoney(parseInt(event.target.value, 10))}
+                                    onChange={event => setMoney(parseInt(event.target.value, 10) || 0)}
                                 />
                             </TableCell>
                             <TableCell>
@@ -144,7 +144,7 @@ export default function MultilineTextFields() {
                                     select
                                     label="貸款學期總數"
                                     value={select}
-                                    onChange={event => setSelect(parseInt(event.target.value, 10))}
+                                    onChange={event => setSelect(parseInt(event.target.value, 10) || 0)}
                                 >
                                     {study.map((option) => (
                                         <MenuItem key={option.value} value={option.value}>
@@ -177,14 +177,14 @@ export default function MultilineTextFields() {
                                 <TextField
                                     label="畢業一年內償還本金"
                                     value={firstYear}
-                                    onChange={event => setFirstYear(parseInt(event.target.value, 10))}
+                                    onChange={event => setFirstYear(parseInt(event.target.value, 10) || 0)}
                                 />
                             </TableCell>
                             <TableCell>
                                 <TextField
                                     label="每次償還本金"
                                     value={returnMoney}
-                                    onChange={event => setReturnMoney(parseInt(event.target.value, 10))}
+                                    onChange={event => setReturnMoney(parseInt(event.target.value, 10) || 0)}
                                 />
                             </TableCell>
                         </TableRow>
