@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-import style from './App.css'
-import {makeStyles} from '@material-ui/core/styles'
 import {
     MenuItem,
     Table,
@@ -83,17 +81,7 @@ const study = [
     },
 ]
 
-const useStyles = makeStyles((theme) => ({
-
-    table: {
-        minWidth: 650,
-        maxWidth: 900,
-    },
-
-}))
-
 export default function MultilineTextFields() {
-    const classes = useStyles()
 
     const [select, setSelect] = useState(0)
     const [money, setMoney] = useState(0)
@@ -133,7 +121,7 @@ export default function MultilineTextFields() {
     })
 
     return (
-        <div className={style.root}>
+        <div style={{height: "auto", maxHeight: 600, width: 800, padding: 10, borderStyle: "solid", margin: "auto",}}>
             <TableContainer>
                 <Table>
                     <TableHead>
@@ -152,8 +140,9 @@ export default function MultilineTextFields() {
                             </TableCell>
                             <TableCell>
                                 <TextField
+                                    style={{width: 150}}
                                     select
-                                    label="選擇貸款學期總數"
+                                    label="貸款學期總數"
                                     value={select}
                                     onChange={event => setSelect(parseInt(event.target.value, 10))}
                                 >
@@ -186,7 +175,7 @@ export default function MultilineTextFields() {
                         <TableRow>
                             <TableCell>
                                 <TextField
-                                    label="畢業後一年內是否有償還本金"
+                                    label="畢業一年內償還本金"
                                     value={firstYear}
                                     onChange={event => setFirstYear(parseInt(event.target.value, 10))}
                                 />
@@ -202,8 +191,8 @@ export default function MultilineTextFields() {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <TableContainer>
-                <Table className={classes.table} aria-label="simple table">
+            <TableContainer style={{maxHeight: 300}}>
+                <Table stickyHeader>
                     <TableHead>
                         <TableRow>
                             <TableCell align="center">年</TableCell>
