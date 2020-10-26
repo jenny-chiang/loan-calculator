@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Build and Deploy
-        uses: chiang611241/github-pages-deploy-action@master
+        uses: chiang611241/loan-calculator@chiang
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
