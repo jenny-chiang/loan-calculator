@@ -81,7 +81,7 @@ const study = [
     },
 ]
 
-export default function MultilineTextFields() {
+export default function LoanCalculator() {
 
     const [select, setSelect] = useState(0)
     const [money, setMoney] = useState(0)
@@ -216,5 +216,5 @@ export default function MultilineTextFields() {
                 </Table>
             </TableContainer>
         </div>
-    );
+    )
 }
