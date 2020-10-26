@@ -115,7 +115,7 @@ export default function LoanCalculator() {
     const table = calcLoan({
         moneyTotal: money,
         semesters: select,
-        rate: cul,
+        rate: cul / 100 / 12,
         returnedMoney: firstYear,
         monthlyReturn: returnMoney
     })
