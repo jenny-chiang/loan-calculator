@@ -98,16 +98,18 @@ export default function LoanCalculator() {
             const monthRemaining = monthTotal - month
             const loanRate = Math.pow(1 + rate, monthRemaining)
             const loanMoney = money > 0 ? Math.ceil(money * ((rate * loanRate) / (loanRate - 1))) : 0
+            const moneyMonthly = Math.ceil(money / monthRemaining)
+            const loanRequired = Math.max(loanMoney - moneyMonthly, 0)
             result.push({
                 year: Math.ceil(month / 12),
                 month,
                 money,
-                loanMoney,
+                moneyMonthly,
+                loanRequired,
                 monthRemaining,
-                loanTotal: loanMoney * monthRemaining,
+                loanMoney,
             })
-            const moneyMonthly = Math.ceil(money / monthRemaining)
-            money -= Math.min(moneyMonthly, monthlyReturn)
+            money -= monthlyReturn ? Math.min(moneyMonthly, monthlyReturn) : loanMoney
         }
         return result
     }
@@ -198,9 +200,10 @@ export default function LoanCalculator() {
                             <TableCell align="center">年</TableCell>
                             <TableCell align="center">期數</TableCell>
                             <TableCell align="center">本金</TableCell>
+                            <TableCell align="center">應還本金</TableCell>
                             <TableCell align="center">應還利息</TableCell>
                             <TableCell align="center">剩餘期數</TableCell>
-                            <TableCell align="center">總應還本息</TableCell>
+                            <TableCell align="center">應還本息</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -208,9 +211,10 @@ export default function LoanCalculator() {
                             <TableCell align="center">{row.year}</TableCell>
                             <TableCell align="center">{row.month}</TableCell>
                             <TableCell align="center">{row.money}</TableCell>
-                            <TableCell align="center">{row.loanMoney}</TableCell>
+                            <TableCell align="center">{row.moneyMonthly || 0}</TableCell>
+                            <TableCell align="center">{row.loanRequired || 0}</TableCell>
                             <TableCell align="center">{row.monthRemaining}</TableCell>
-                            <TableCell align="center">{row.loanTotal}</TableCell>
+                            <TableCell align="center">{row.loanMoney}</TableCell>
                         </TableRow>)}
                     </TableBody>
                 </Table>
