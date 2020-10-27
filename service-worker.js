@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/loan-calculator/precache-manifest.395920e51ffd600faa7b574d3a058670.js"
+  "/loan-calculator/precache-manifest.cefe0cb65f916d2d3605a26ad95d9ada.js"
 );
 
 self.addEventListener('message', (event) => {
