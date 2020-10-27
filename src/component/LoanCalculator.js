@@ -123,7 +123,16 @@ export default function LoanCalculator() {
     })
 
     return (
-        <div style={{height: "auto", maxHeight: 600, width: 800, padding: 10, borderStyle: "solid", margin: "auto",}}>
+        <div style={{
+            height: "auto",
+            maxHeight: 600,
+            width: "auto",
+            maxWidth: 800,
+            padding: 10,
+            borderStyle: "solid",
+            margin: "auto",
+            backgroundColor: "#FCFCFC"
+        }}>
             <TableContainer>
                 <Table>
                     <TableHead>
