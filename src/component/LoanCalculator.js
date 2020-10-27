@@ -144,14 +144,14 @@ export default function LoanCalculator() {
                         <TableRow>
                             <TableCell>
                                 <TextField
-                                    label="輸入總貸款金額"
+                                    label="總貸款金額"
                                     value={money}
                                     onChange={event => setMoney(parseInt(event.target.value, 10) || 0)}
                                 />
                             </TableCell>
                             <TableCell>
                                 <TextField
-                                    style={{width: 150}}
+                                    style={{width: 130}}
                                     select
                                     label="貸款學期總數"
                                     value={select}
@@ -166,7 +166,7 @@ export default function LoanCalculator() {
                             </TableCell>
                             <TableCell>
                                 <TextField
-                                    label="輸入年利率"
+                                    label="年利率"
                                     value={cul}
                                     onChange={event => setCul(parseFloat(event.target.value))}
                                 />
@@ -186,7 +186,7 @@ export default function LoanCalculator() {
                         <TableRow>
                             <TableCell>
                                 <TextField
-                                    label="畢業一年內償還本金"
+                                    label="第一年償還本金"
                                     value={firstYear}
                                     onChange={event => setFirstYear(parseInt(event.target.value, 10) || 0)}
                                 />
