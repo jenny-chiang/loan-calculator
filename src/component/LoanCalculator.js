@@ -81,7 +81,7 @@ const study = [
     },
 ]
 
-export default function LoanCalculator() {
+const LoanCalculator = () => {
 
     const [select, setSelect] = useState(0)
     const [money, setMoney] = useState(0)
@@ -231,3 +231,5 @@ export default function LoanCalculator() {
         </div>
     )
 }
+
+export default LoanCalculator
