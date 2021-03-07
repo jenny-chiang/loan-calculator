@@ -10,7 +10,7 @@ const Page = () => {
             <div>
                 <Nav />
                 <Switch>
-                    <Route path="/" exact component={MainPage}/>
+                    <Route path="/loan-calculator" exact component={MainPage}/>
                     <Route path="/rate" component={RatePage}/>
                 </Switch>
             </div>
