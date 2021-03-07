@@ -1,7 +1,7 @@
 import React from 'react'
 import LoanCalculator from "../component/LoanCalculator"
 
-export default function Page() {
+const MainPage = () => {
     return (
         <div style={{textAlign: "center"}}>
             <h1 style={{margin: 20}}>學貸計算機</h1>
@@ -14,3 +14,5 @@ export default function Page() {
         </div>
     )
 }
+
+export default MainPage
