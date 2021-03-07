@@ -1,3 +1,11 @@
+.center {
+    text-align: center;
+}
+
+.mr-20 {
+    margin: 20px;
+}
+
 .mainNav {
     align-items: center;
     background-color: #005AB5;
