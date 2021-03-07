@@ -8,7 +8,7 @@ const Nav = () => {
             <h3>學貸計算機</h3>
             <ul className="navLink">
                 <Link to="/loan-calculator" className="linkStyle"><li>計算機</li></Link>
-                <Link to="/rate" className="linkStyle"><li>學貸利率資訊</li></Link>
+                <Link to="/rate" className="linkStyle"><li>相關資訊</li></Link>
             </ul>
         </nav>
     )
