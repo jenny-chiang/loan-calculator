@@ -8,11 +8,13 @@ const News = props => {
         link
     } = props
 
-    return <div className="news">
+    return <div className="card">
                 <p>{title}</p>
                 {subtitle && <p>{subtitle}</p>}
-                <i class="fa fa-hand-o-right" style={{marginRight: 5}}></i>
-                <a href={link}>資訊連結</a>
+                <div style={{ flexDirection: 'row' }}>
+                    <i class="fa fa-hand-o-right" style={{marginRight: 5}}></i>
+                    <a href={link}>資訊連結</a>
+                </div>
             </div>
 }
 
