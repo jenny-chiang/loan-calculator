@@ -42,4 +42,7 @@
     width: 60vw;
     padding: 10px;
 }
+
+.bank {
+    flex-direction: row;
 }
