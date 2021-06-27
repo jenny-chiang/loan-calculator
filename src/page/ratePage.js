@@ -17,10 +17,16 @@ const RatePage = () => {
                     subtitle="* 1 次可以延後 1 年，最多可以申請 3 次"
                     link="https://udn.com/news/story/6885/4600764"
                 />
+                <News
+                    title="Dcard 就學貸款資訊彙整"
+                    img={require("../images/Dcard_Favicon_x520.png")}
+                    imgAlt={'Dcard'}
+                    link="https://www.facebook.com/dcard.tw/posts/1138109576277311/"
+                />
             </div>
             <h3 className="mr-20">學貸入口</h3>
             <div className="mr-20" style={{alignItems: 'center'}}>
-            <Bank
+                <Bank
                     bankLogo={require("../images/bankOfTaiwanLogo.jpg")}
                     bankName="台灣銀行"
                     bankLink="https://sloan.bot.com.tw/newsloan/login/SLoanLogin.action"
