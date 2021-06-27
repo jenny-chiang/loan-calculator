@@ -33,14 +33,16 @@
 
 .card {
     border-bottom-style: solid;
-    border-width: 3px;
-    border-color: #005AB5;
+    border-width: 1px;
+    border-color: #BEBEBE;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 60vw;
     padding: 10px;
+    box-shadow:  3px 5px #D0D0D0;
+}
 }
 
 .bank {
