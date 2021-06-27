@@ -10,10 +10,16 @@ const Bank = props => {
     } = props
 
     return <div className="card bank">
-                <img src= {bankLogo} alt={bankLogoName} width='80' height='80' />
+                <img
+                    src= {bankLogo}
+                    alt={bankLogoName}
+                    width='70'
+                    height='70'
+                    style={{objectFit: 'scale-down'}}
+                />
                 <div style={{ flexDirection: 'column', paddingLeft: 20 }}>
                     <p>{bankName}</p>
-                <i className="fa fa-hand-o-right" style={{marginRight: 5}}></i>
+                <i className="fa fa-hand-o-right" style={{marginRight: 5}}/>
                 <a href={bankLink}>立即前往</a>
                 </div>
             </div>
