@@ -20,6 +20,25 @@ const news = [
         link: 'https://www.facebook.com/dcard.tw/posts/1138109576277311/',
     },
 ]
+
+const bank = [
+    {
+        bankLogo: require("../images/bankOfTaiwanLogo.jpg"),
+        bankName: '臺灣銀行',
+        bankLink: 'https://sloan.bot.com.tw/newsloan/login/SLoanLogin.action'
+    },
+    {
+        bankLogo: require("../images/fubonBankLogo.png"),
+        bankName: '台北富邦銀行',
+        bankLink: 'https://school.taipeifubon.com.tw/student/common/Index.faces'
+    },
+    {
+        bankLogo: require("../images/bankOfKaohsiungLogo.jpg"),
+        bankName: '高雄銀行',
+        bankLink: 'https://ssl.bok.com.tw/member/'
+    },
+]
+
 const RatePage = () => {
     return (
         <div className="center">
@@ -40,21 +59,16 @@ const RatePage = () => {
             </div>
             <h3 className="mr-20">學貸入口</h3>
             <div className="mr-20" style={{alignItems: 'center'}}>
-                <Bank
-                    bankLogo={require("../images/bankOfTaiwanLogo.jpg")}
-                    bankName="台灣銀行"
-                    bankLink="https://sloan.bot.com.tw/newsloan/login/SLoanLogin.action"
-                />
-                <Bank
-                    bankLogo={require("../images/fubonBankLogo.png")}
-                    bankName="台北富邦銀行"
-                    bankLink="https://school.taipeifubon.com.tw/student/common/Index.faces"
-                />
-                <Bank
-                    bankLogo={require("../images/bankOfKaohsiungLogo.jpg")}
-                    bankName="高雄銀行"
-                    bankLink="https://ssl.bok.com.tw/member/"
-                />
+                {bank.map((b, index) => {
+                    return (
+                        <Bank
+                            key={index}
+                            bankLogo={b.bankLogo}
+                            bankName={b.bankName}
+                            bankLink={b.bankLink}
+                        />
+                    )
+                })}
             </div>
         </div>
     )
