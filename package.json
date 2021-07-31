@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://chiang611241.github.io/loan-calculator",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
+    "@material-ui/core": "4.12.3",
     "cra-template": "1.0.3",
     "react": "^17.0.0",
     "react-bootstrap": "^1.4.0",
