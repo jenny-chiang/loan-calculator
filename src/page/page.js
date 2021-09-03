@@ -2,13 +2,13 @@ import React from 'react'
 import Nav from '../component/nav'
 import RatePage from './ratePage'
 import MainPage from "./mainPage"
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 const Page = () => {
     return (
         <Router>
             <div>
-                <Nav />
+                <Nav/>
                 <Switch>
                     <Route path="/loan-calculator" exact component={MainPage}/>
                     <Route path="/rate" component={RatePage}/>
