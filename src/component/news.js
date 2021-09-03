@@ -1,14 +1,14 @@
 import React from 'react'
 import '../style/allStyle.css'
+import PropTypes from "prop-types"
 
-const News = props => {
-    const {
-        title,
-        subtitle,
-        link,
-        img,
-        imgAlt
-    } = props
+const News = ({
+                  title,
+                  subtitle,
+                  link,
+                  img,
+                  imgAlt
+              }) => {
 
     return <div className="card directionRow alignItems" style={{flex: 1}}>
         {img && <img
@@ -28,6 +28,14 @@ const News = props => {
         </div>
 
     </div>
+}
+
+News.propTypes = {
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    link: PropTypes.string,
+    img: PropTypes.string,
+    imgAlt: PropTypes.string,
 }
 
 export default News
