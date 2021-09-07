@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import {
-    MenuItem,
     Table,
     TableBody,
     TableCell,
@@ -9,79 +8,26 @@ import {
     TableRow,
     TextField
 } from '@material-ui/core'
+import {makeStyles, useTheme} from "@material-ui/core"
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-const study = [
-    {
-        value: 0,
-        label: '請選擇學期數',
-    },
-    {
-        value: 1,
-        label: '1 學期',
-    },
-    {
-        value: 2,
-        label: '2 學期',
-    },
-    {
-        value: 3,
-        label: '3 學期',
-    },
-    {
-        value: 4,
-        label: '4 學期',
-    },
-    {
-        value: 5,
-        label: '5 學期',
-    },
-    {
-        value: 6,
-        label: '6 學期',
-    },
-    {
-        value: 7,
-        label: '7 學期',
-    },
-    {
-        value: 8,
-        label: '8 學期',
-    },
-    {
-        value: 9,
-        label: '9 學期',
-    },
-    {
-        value: 10,
-        label: '10 學期',
-    },
-    {
-        value: 11,
-        label: '11 學期',
-    },
-    {
-        value: 12,
-        label: '12 學期',
-    },
-    {
-        value: 13,
-        label: '13 學期',
-    },
-    {
-        value: 14,
-        label: '14 學期',
-    },
-    {
-        value: 15,
-        label: '15 學期',
-    },
-    {
-        value: 16,
-        label: '16 學期',
-    },
-]
+const useStyles = makeStyles(() => ({
+    container: {
+        height: "auto",
+        maxHeight: 800,
+        width: "auto",
+        maxWidth: 800,
+        padding: 10,
+        borderStyle: "solid",
+        margin: "auto",
+        backgroundColor: "#FCFCFC"
+    }
+}))
 
 const LoanCalculator = () => {
+    const classes = useStyles()
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
 
     const [select, setSelect] = useState(0)
     const [money, setMoney] = useState(0)
@@ -123,16 +69,7 @@ const LoanCalculator = () => {
     })
 
     return (
-        <div style={{
-            height: "auto",
-            maxHeight: 600,
-            width: "auto",
-            maxWidth: 800,
-            padding: 10,
-            borderStyle: "solid",
-            margin: "auto",
-            backgroundColor: "#FCFCFC"
-        }}>
+        <div className={classes.container}>
             <TableContainer>
                 <Table>
                     <TableHead>
@@ -141,37 +78,70 @@ const LoanCalculator = () => {
                         </TableCell>
                     </TableHead>
                     <TableBody>
-                        <TableRow>
-                            <TableCell>
-                                <TextField
-                                    label="總貸款金額"
-                                    value={money}
-                                    onChange={event => setMoney(parseInt(event.target.value, 10) || 0)}
-                                />
-                            </TableCell>
-                            <TableCell>
-                                <TextField
-                                    style={{width: 130}}
-                                    select
-                                    label="貸款學期總數"
-                                    value={select}
-                                    onChange={event => setSelect(parseInt(event.target.value, 10) || 0)}
-                                >
-                                    {study.map((option) => (
-                                        <MenuItem key={option.value} value={option.value}>
-                                            {option.label}
-                                        </MenuItem>
-                                    ))}
-                                </TextField>
-                            </TableCell>
-                            <TableCell>
-                                <TextField
-                                    label="年利率"
-                                    value={cul}
-                                    onChange={event => setCul(parseFloat(event.target.value))}
-                                />
-                            </TableCell>
-                        </TableRow>
+                        {isMobile
+                            ? (
+                                <>
+                                    <TableRow>
+                                        <TableCell colSpan={2}>
+                                            <TextField
+                                                label="總貸款金額"
+                                                value={money}
+                                                fullWidth
+                                                onChange={event => setMoney(parseInt(event.target.value, 10) || 0)}
+                                            />
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>
+                                            <TextField
+                                                style={{width: 130}}
+                                                label="貸款學期總數"
+                                                value={select}
+                                                type="number"
+                                                inputProps={{min: 0, max: 16}}
+                                                fullWidth
+                                                onChange={event => setSelect(parseInt(event.target.value, 10) || 0)}
+                                            />
+                                        </TableCell>
+                                        <TableCell>
+                                            <TextField
+                                                label="年利率"
+                                                value={cul}
+                                                fullWidth
+                                                onChange={event => setCul(parseFloat(event.target.value))}
+                                            />
+                                        </TableCell>
+                                    </TableRow>
+                                </>
+                            )
+                            : (
+                                <TableRow>
+                                    <TableCell>
+                                        <TextField
+                                            label="總貸款金額"
+                                            value={money}
+                                            onChange={event => setMoney(parseInt(event.target.value, 10) || 0)}
+                                        />
+                                    </TableCell>
+                                    <TableCell>
+                                        <TextField
+                                            style={{width: 130}}
+                                            label="貸款學期總數"
+                                            value={select}
+                                            type="number"
+                                            inputProps={{min: 0, max: 16}}
+                                            onChange={event => setSelect(parseInt(event.target.value, 10) || 0)}
+                                        />
+                                    </TableCell>
+                                    <TableCell>
+                                        <TextField
+                                            label="年利率"
+                                            value={cul}
+                                            onChange={event => setCul(parseFloat(event.target.value))}
+                                        />
+                                    </TableCell>
+                                </TableRow>
+                            )}
                     </TableBody>
                 </Table>
             </TableContainer>
