@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/loan-calculator/static/css/main.d414fed0.chunk.css",
-    "main.js": "/loan-calculator/static/js/main.c9fb7497.chunk.js",
-    "main.js.map": "/loan-calculator/static/js/main.c9fb7497.chunk.js.map",
+    "main.js": "/loan-calculator/static/js/main.7f257841.chunk.js",
+    "main.js.map": "/loan-calculator/static/js/main.7f257841.chunk.js.map",
     "runtime-main.js": "/loan-calculator/static/js/runtime-main.fe8f2651.js",
     "runtime-main.js.map": "/loan-calculator/static/js/runtime-main.fe8f2651.js.map",
-    "static/js/2.9c473ce4.chunk.js": "/loan-calculator/static/js/2.9c473ce4.chunk.js",
-    "static/js/2.9c473ce4.chunk.js.map": "/loan-calculator/static/js/2.9c473ce4.chunk.js.map",
+    "static/js/2.e416fcbd.chunk.js": "/loan-calculator/static/js/2.e416fcbd.chunk.js",
+    "static/js/2.e416fcbd.chunk.js.map": "/loan-calculator/static/js/2.e416fcbd.chunk.js.map",
     "index.html": "/loan-calculator/index.html",
     "static/css/main.d414fed0.chunk.css.map": "/loan-calculator/static/css/main.d414fed0.chunk.css.map",
-    "static/js/2.9c473ce4.chunk.js.LICENSE.txt": "/loan-calculator/static/js/2.9c473ce4.chunk.js.LICENSE.txt",
+    "static/js/2.e416fcbd.chunk.js.LICENSE.txt": "/loan-calculator/static/js/2.e416fcbd.chunk.js.LICENSE.txt",
     "static/media/Dcard_Favicon_x520.80306699.png": "/loan-calculator/static/media/Dcard_Favicon_x520.80306699.png",
     "static/media/bankOfKaohsiungLogo.7eb20fad.jpg": "/loan-calculator/static/media/bankOfKaohsiungLogo.7eb20fad.jpg",
     "static/media/bankOfTaiwanLogo.fba17ff7.jpg": "/loan-calculator/static/media/bankOfTaiwanLogo.fba17ff7.jpg",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.fe8f2651.js",
-    "static/js/2.9c473ce4.chunk.js",
+    "static/js/2.e416fcbd.chunk.js",
     "static/css/main.d414fed0.chunk.css",
-    "static/js/main.c9fb7497.chunk.js"
+    "static/js/main.7f257841.chunk.js"
   ]
 }
