@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import News from '../component/news'
 import Bank from '../component/bank'
 import dcardLogo from '../images/Dcard_Favicon_x520.png'
@@ -6,9 +6,31 @@ import taiwanBank from '../images/bankOfTaiwanLogo.jpg'
 import taipeiFubon from '../images/fubonBankLogo.png'
 import KaohsiungBank from '../images/bankOfKaohsiungLogo.jpg'
 
-import '../style/allStyle.css'
+import TextField from '@material-ui/core/TextField'
+import {makeStyles} from '@material-ui/core'
+
+const useStyle = makeStyles({
+    center: {
+        textAlign: 'center',
+    },
+    margin: {
+        margin: 20,
+    },
+    row: {
+        flexDirection: 'row',
+    },
+    card: {
+        margin: 20,
+        alignItems: 'center',
+    }
+})
 
 const news = [
+    {
+        title: '學貸 Q&A',
+        subtitle: '是否信用紀錄、申請信用卡',
+        link: 'https://www.money101.com.tw/blog/%E5%AD%B8%E8%B2%B8-%E7%B7%A9%E7%B9%B3-%E4%BF%A1%E8%B2%B8-%E8%B2%B8%E6%AC%BE-%E4%BF%A1%E7%94%A8%E5%8D%A1',
+    },
     {
         title: '因應新冠肺炎疫情影響，學貸利率降為 0.9%（原 1.15% ）',
         link: 'https://www.unews.com.tw/News/Info/3515',
@@ -45,11 +67,24 @@ const bank = [
 ]
 
 const RatePage = () => {
+    const classes = useStyle()
+    const [filter, setFilter] = useState('')
     return (
-        <div className="center">
-            <h3 className="mr-20">學貸利率相關資訊</h3>
-            <div className="mr-20" style={{alignItems: 'center'}}>
-                {news.map((n, index) => {
+        <div className={classes.center}>
+            <div className={classes.row}>
+                <h3 className={classes.margin}>學貸利率相關資訊</h3>
+                <TextField
+                    value={filter}
+                    onChange={(event) => setFilter(event.target.value.toLowerCase())}
+                    label="篩選新聞"
+                />
+            </div>
+            <div className={classes.card}>
+                {news
+                    .filter((news) => (
+                        news.title.toLowerCase().includes(filter)
+                        || news.subtitle?.toLowerCase()?.includes(filter)))
+                    .map((n, index) => {
                     return (
                         <News
                             key={index}
@@ -62,8 +97,8 @@ const RatePage = () => {
                     )
                 })}
             </div>
-            <h3 className="mr-20">學貸入口</h3>
-            <div className="mr-20" style={{alignItems: 'center'}}>
+            <h3 className={classes.margin}>學貸入口</h3>
+            <div className={classes.card}>
                 {bank.map((b, index) => {
                     return (
                         <Bank
