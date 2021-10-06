@@ -1,5 +1,5 @@
 import React from 'react'
-import LoanCalculator from '../component/LoanCalculator'
+import LoanCalculator from '../component/loanCalculator/loanCalculator'
 import '../style/allStyle.css'
 
 const MainPage = () => {
