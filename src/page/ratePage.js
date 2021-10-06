@@ -6,7 +6,9 @@ import taiwanBank from '../images/bankOfTaiwanLogo.jpg'
 import taipeiFubon from '../images/fubonBankLogo.png'
 import KaohsiungBank from '../images/bankOfKaohsiungLogo.jpg'
 
+import Box from '@material-ui/core/Box'
 import TextField from '@material-ui/core/TextField'
+import SearchIcon from '@material-ui/icons/Search'
 import { makeStyles } from '@material-ui/core'
 
 const useStyle = makeStyles({
@@ -22,6 +24,11 @@ const useStyle = makeStyles({
   card: {
     margin: 20,
     alignItems: 'center',
+  },
+  searchBar: {
+    width: 200,
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 })
 
@@ -73,17 +80,22 @@ const RatePage = () => {
     <div className={classes.center}>
       <div className={classes.row}>
         <h3 className={classes.margin}>學貸利率相關資訊</h3>
-        <TextField
-          value={filter}
-          onChange={(event) => setFilter(event.target.value.toLowerCase())}
-          label="篩選新聞"
-        />
+        <div className={classes.searchBar}>
+          <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+            <SearchIcon />
+            <TextField
+              value={filter}
+              onChange={(event) => setFilter(event.target.value)}
+              label="篩選新聞"
+            />
+          </Box>
+        </div>
       </div>
       <div className={classes.card}>
         {news
           .filter(
             (news) =>
-              news.title.toLowerCase().includes(filter) ||
+              news.title.toLowerCase().includes(filter.toLowerCase()) ||
               news.subtitle?.toLowerCase()?.includes(filter)
           )
           .map((n, index) => {
