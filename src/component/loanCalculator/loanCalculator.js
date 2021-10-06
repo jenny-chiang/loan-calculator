@@ -88,7 +88,9 @@ const LoanCalculator = () => {
       <TableContainer>
         <Table>
           <TableHead>
-            <TableCell colSpan={2}>選填欄位</TableCell>
+            <TableRow>
+              <TableCell colSpan={2}>選填欄位</TableCell>
+            </TableRow>
           </TableHead>
           <TableBody>
             <TableRow>
