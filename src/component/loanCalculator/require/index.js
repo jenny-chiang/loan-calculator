@@ -12,7 +12,7 @@ import { useTheme } from '@material-ui/core'
 import MobileRequireInput from './mobileRequireInput'
 import RequireInput from './requireInput'
 
-const RequireTable = ({ money, setMoney, select, setSelect, cul, setCul }) => {
+const RequireTable = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('xs'))
 
@@ -25,25 +25,7 @@ const RequireTable = ({ money, setMoney, select, setSelect, cul, setCul }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {isMobile ? (
-            <MobileRequireInput
-              money={money}
-              setMoney={setMoney}
-              select={select}
-              setSelect={setSelect}
-              cul={cul}
-              setCul={setCul}
-            />
-          ) : (
-            <RequireInput
-              money={money}
-              setMoney={setMoney}
-              select={select}
-              setSelect={setSelect}
-              cul={cul}
-              setCul={setCul}
-            />
-          )}
+          {isMobile ? <MobileRequireInput /> : <RequireInput />}
         </TableBody>
       </Table>
     </TableContainer>
