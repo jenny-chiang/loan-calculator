@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createContext, useState } from 'react'
 import {
   Table,
   TableBody,
@@ -25,6 +25,8 @@ const useStyles = makeStyles(() => ({
     backgroundColor: '#FCFCFC',
   },
 }))
+
+export const RequireContext = createContext({})
 
 const LoanCalculator = () => {
   const classes = useStyles()
@@ -75,16 +77,20 @@ const LoanCalculator = () => {
     monthlyReturn: returnMoney,
   })
 
+  const value = {
+    money,
+    setMoney,
+    select,
+    setSelect,
+    cul,
+    setCul,
+  }
+
   return (
     <div className={classes.container}>
-      <RequireTable
-        money={money}
-        setMoney={setMoney}
-        select={select}
-        setSelect={setSelect}
-        cul={cul}
-        setCul={setCul}
-      />
+      <RequireContext.Provider value={value}>
+        <RequireTable />
+      </RequireContext.Provider>
       <TableContainer>
         <Table>
           <TableHead>
