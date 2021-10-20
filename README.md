@@ -1,7 +1,7 @@
 # 學貸計算機
 
 這是一個練習 ReactJs 的專案，順便解決我計算學貸的問題
-
+https://chiang611241.github.io/loan-calculator/
 
 ## 使用方式
 
