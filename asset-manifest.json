@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/loan-calculator/static/css/main.7ebf68b4.chunk.css",
-    "main.js": "/loan-calculator/static/js/main.71a33409.chunk.js",
-    "main.js.map": "/loan-calculator/static/js/main.71a33409.chunk.js.map",
-    "runtime-main.js": "/loan-calculator/static/js/runtime-main.00256d16.js",
-    "runtime-main.js.map": "/loan-calculator/static/js/runtime-main.00256d16.js.map",
-    "static/js/2.2fc17e8e.chunk.js": "/loan-calculator/static/js/2.2fc17e8e.chunk.js",
-    "static/js/2.2fc17e8e.chunk.js.map": "/loan-calculator/static/js/2.2fc17e8e.chunk.js.map",
+    "main.css": "/loan-calculator/static/css/main.1da8e307.chunk.css",
+    "main.js": "/loan-calculator/static/js/main.bdcfdd8d.chunk.js",
+    "main.js.map": "/loan-calculator/static/js/main.bdcfdd8d.chunk.js.map",
+    "runtime-main.js": "/loan-calculator/static/js/runtime-main.fe8f2651.js",
+    "runtime-main.js.map": "/loan-calculator/static/js/runtime-main.fe8f2651.js.map",
+    "static/js/2.604ea986.chunk.js": "/loan-calculator/static/js/2.604ea986.chunk.js",
+    "static/js/2.604ea986.chunk.js.map": "/loan-calculator/static/js/2.604ea986.chunk.js.map",
     "index.html": "/loan-calculator/index.html",
-    "static/css/main.7ebf68b4.chunk.css.map": "/loan-calculator/static/css/main.7ebf68b4.chunk.css.map",
-    "static/js/2.2fc17e8e.chunk.js.LICENSE.txt": "/loan-calculator/static/js/2.2fc17e8e.chunk.js.LICENSE.txt",
+    "static/css/main.1da8e307.chunk.css.map": "/loan-calculator/static/css/main.1da8e307.chunk.css.map",
+    "static/js/2.604ea986.chunk.js.LICENSE.txt": "/loan-calculator/static/js/2.604ea986.chunk.js.LICENSE.txt",
     "static/media/Dcard_Favicon_x520.80306699.png": "/loan-calculator/static/media/Dcard_Favicon_x520.80306699.png",
     "static/media/bankOfKaohsiungLogo.7eb20fad.jpg": "/loan-calculator/static/media/bankOfKaohsiungLogo.7eb20fad.jpg",
     "static/media/bankOfTaiwanLogo.fba17ff7.jpg": "/loan-calculator/static/media/bankOfTaiwanLogo.fba17ff7.jpg",
     "static/media/fubonBankLogo.c91670ef.png": "/loan-calculator/static/media/fubonBankLogo.c91670ef.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.00256d16.js",
-    "static/js/2.2fc17e8e.chunk.js",
-    "static/css/main.7ebf68b4.chunk.css",
-    "static/js/main.71a33409.chunk.js"
+    "static/js/runtime-main.fe8f2651.js",
+    "static/js/2.604ea986.chunk.js",
+    "static/css/main.1da8e307.chunk.css",
+    "static/js/main.bdcfdd8d.chunk.js"
   ]
 }
