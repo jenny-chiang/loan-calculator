@@ -29,3 +29,7 @@ https://chiang611241.github.io/loan-calculator/
 3. javascript 練習（map, filter)
 4. material ui 練習
 5. react-route-dom 練習（計算機頁面、新聞頁面）
+
+## 2022 修復項目
+1. Nav 元件 RWD
+2. 數字輸入處的首字不會為 0
