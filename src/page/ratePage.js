@@ -54,10 +54,10 @@ const RatePage = () => {
               news.title.toLowerCase().includes(filter.toLowerCase()) ||
               news.subtitle?.toLowerCase()?.includes(filter)
           )
-          .map((n, index) => {
+          .map((n) => {
             return (
               <News
-                key={index}
+                key={`${n.title}`}
                 title={n.title}
                 subtitle={n?.subtitle}
                 img={n?.img}
@@ -69,10 +69,10 @@ const RatePage = () => {
       </div>
       <h3 className={classes.margin}>學貸入口</h3>
       <div className={classes.card}>
-        {bank.map((b, index) => {
+        {bank.map((b) => {
           return (
             <Bank
-              key={index}
+              key={`${b.bankName}`}
               bankLogo={b.bankLogo}
               bankName={b.bankName}
               bankLink={b.bankLink}
