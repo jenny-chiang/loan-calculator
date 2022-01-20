@@ -4,6 +4,7 @@ import TableRow from '@material-ui/core/TableRow'
 import TextField from '@material-ui/core/TextField'
 
 import { RequireContext } from '../loanCalculator'
+import { numberToString, floatNumberToString } from '../../../covert'
 
 const MobileRequireInput = () => {
   const { money, setMoney, select, setSelect, cul, setCul } =
@@ -15,7 +16,7 @@ const MobileRequireInput = () => {
         <TableCell colSpan={2}>
           <TextField
             label="總貸款金額"
-            value={money}
+            value={numberToString(money)}
             fullWidth
             onChange={(event) =>
               setMoney(parseInt(event.target.value, 10) || 0)
@@ -28,7 +29,7 @@ const MobileRequireInput = () => {
           <TextField
             style={{ width: 130 }}
             label="貸款學期總數"
-            value={select}
+            value={numberToString(select)}
             type="number"
             inputProps={{ min: 0, max: 16 }}
             fullWidth
@@ -40,7 +41,7 @@ const MobileRequireInput = () => {
         <TableCell>
           <TextField
             label="年利率"
-            value={cul}
+            value={floatNumberToString(cul)}
             fullWidth
             onChange={(event) => setCul(parseFloat(event.target.value))}
           />

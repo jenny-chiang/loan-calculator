@@ -66,7 +66,7 @@ const Nav = () => {
             className={classes.menuBtn}
           >
             <IconButton
-              size="large"
+              size="medium"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
@@ -92,7 +92,10 @@ const Nav = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={`menuItem-${page.link}`}
+                  onClick={handleCloseNavMenu}
+                >
                   <Link to={page.link}>{page.name}</Link>
                 </MenuItem>
               ))}
@@ -103,7 +106,11 @@ const Nav = () => {
             className={classes.menuBtn}
           >
             {pages.map((page) => (
-              <Link key={page} to={page.link} className={classes.link}>
+              <Link
+                key={`link-${page.link}`}
+                to={page.link}
+                className={classes.link}
+              >
                 {page.name}
               </Link>
             ))}
