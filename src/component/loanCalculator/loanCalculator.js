@@ -105,7 +105,9 @@ const LoanCalculator = () => {
                   label="第一年償還本金"
                   value={firstYear}
                   onChange={(event) =>
-                    setFirstYear(parseInt(event.target.value, 10) || 0)
+                    setFirstYear(
+                      parseInt(event.target.value, 10).toString() || 0
+                    )
                   }
                 />
               </TableCell>
@@ -114,7 +116,9 @@ const LoanCalculator = () => {
                   label="每次償還本金"
                   value={returnMoney}
                   onChange={(event) =>
-                    setReturnMoney(parseInt(event.target.value, 10) || 0)
+                    setReturnMoney(
+                      parseInt(event.target.value, 10).toString() || 0
+                    )
                   }
                 />
               </TableCell>
