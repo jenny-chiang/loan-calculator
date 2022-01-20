@@ -9,8 +9,6 @@ const RequireInput = () => {
   const { money, setMoney, select, setSelect, cul, setCul } =
     useContext(RequireContext)
 
-  console.log(cul)
-
   return (
     <TableRow>
       <TableCell>
